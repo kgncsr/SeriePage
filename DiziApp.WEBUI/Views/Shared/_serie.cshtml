@@ -1,0 +1,24 @@
+﻿@model Serie
+
+<div class="card mb-4">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="/img/@Model.ImageUrl" alt="@Model.Title" class="img-fluid" />
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Title</h5>
+                <div>
+                    <a class="btn btn-primary" asp-controller="Series" asp-action="Details" asp-route-id="@Model.SerieId">Detay</a>
+                    <a class="btn btn-primary" asp-controller="Series" asp-action="Edit" asp-route-id="@Model.SerieId">Güncelle</a>
+
+                    <form asp-controller="Series" asp-action="Delete" method="post" style="display:inline-block">
+                        <input type="hidden" name="SerieId" value="@Model.SerieId" />
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

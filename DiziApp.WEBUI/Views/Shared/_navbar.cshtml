@@ -1,0 +1,25 @@
+﻿<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <a href="/" class="navbar-brand">Anasayfa</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="/series/list" class="nav-link">Diziler</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/series/create" class="nav-link">Dizi Olustur</a>
+                </li>
+            </ul>
+
+            <form action="/series/list" method="get" class="form-inline">
+                <input type="text" name="q" placeholder="Dizi Ara" class="form-control mr-2" />
+                <button type="submit" class="btn btn-outline-light">Dizi Bul</button>
+            </form>
+
+            
+        </div>
+    </div>
+</nav>

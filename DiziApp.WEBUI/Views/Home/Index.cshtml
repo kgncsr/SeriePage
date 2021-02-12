@@ -1,0 +1,16 @@
+﻿@model HomeViewModel
+
+@section header{
+    @await Html.PartialAsync("_header")
+}
+
+
+
+
+
+<div>
+    @foreach (var item in Model.PopularSeries)
+    {
+        @await Html.PartialAsync("_serie", item)
+    }
+</div>

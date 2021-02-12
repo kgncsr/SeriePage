@@ -1,0 +1,12 @@
+﻿@model SeriesViewModel
+
+@section menu{
+    @await Component.InvokeAsync("Categories")
+}
+
+<div>
+    @foreach (var item in Model.Series)
+    {
+        @await Html.PartialAsync("_serie", item)
+    }
+</div>

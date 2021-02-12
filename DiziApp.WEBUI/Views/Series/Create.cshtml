@@ -1,0 +1,41 @@
+﻿@model Serie
+
+<h1>Dizi Olustur</h1>
+<hr />
+<hr />
+
+<form asp-controller="series" asp-action="create" method="post">
+
+    <div class="form-group">
+        <label asp-for="Title" style="color:red; font-size:large;"></label>
+        <input asp-for="Title" class="form-control">
+        <span asp-validation-for="Title" class="text-primary"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description" style="color:red; font-size:large;"></label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-primary"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Director" style="color:red; font-size:large;"></label>
+        <input asp-for="Director" class="form-control" />
+        <span asp-validation-for="Director" class="text-primary"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImageUrl" style="color:red; font-size:large;"></label>
+        <input asp-for="ImageUrl" class="form-control" />
+        <span asp-validation-for="ImageUrl" class="text-primary"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CategoryId" style="color:red; font-size:large;"></label>
+        <select asp-for="CategoryId" asp-items="@ViewBag.Category" class="form-control">
+        </select>
+        <span asp-validation-for="CategoryId" class="text-primary"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
